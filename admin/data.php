@@ -87,7 +87,7 @@ include ('../header.php');
                             <td><?php echo $d['tgl_ubah'] ?></td>
                             <td class="text-center">
                               <a href="menu.php?page=edit-barang&id=<?php echo $d['id'] ?>" class="btn btn-sm btn-dark"><i class="bi bi-pen"></i>EDIT</a>
-                              <a href="hapus.php?id=<?php echo $d['kode_barang'] ?>" class="btn btn-sm btn-light"><i class="bi bi-eraser"></i>HAPUS</a>
+                              <a href="hapus.php?id=<?php echo $d['id'] ?>" class="btn btn-sm btn-light"><i class="bi bi-eraser"></i>HAPUS</a>
                             </td>
                         </tr>
                       

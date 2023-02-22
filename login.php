@@ -31,11 +31,11 @@ include ('header.php');
               <div class="card-body p-4 p-lg-5 text-white">
               <form id="login-form" class="form" action="proses_login.php" method="post">
                             <h3 class="text-center">LOGIN</h3>
-                            <div class="form-outline mb-4">
+                            <div class="form-outline mb-4" style="color:black;">
                                 <label for="username" > <b>EMAIL</b> </label><br>
                                 <input type="email" name="email" id="email" class="form-control">
                             </div>
-                            <div class="form-outline mb-4" style="color:white;">
+                            <div class="form-outline mb-4" style="color:black;">
                                 <label for="password" >  <b>PASSWORD</b> </label><br>
                                 <input type="password" name="password" id="password" class="form-control">
                             </div>

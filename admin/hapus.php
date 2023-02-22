@@ -8,7 +8,7 @@ $id = $_GET['id'];
 $query = "DELETE FROM data_barang WHERE id = '$id'";
 
 if($conn->query($query)) {
-    header("location: menu.php");
+    header("location: menu.php?page=data");
 } else {
     echo "DATA GAGAL DIHAPUS!";
 }
