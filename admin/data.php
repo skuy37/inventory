@@ -22,7 +22,7 @@ include ('../header.php');
                 </div>
             </form>
             <div style="margin-left: 95%;">
-                    <a href="menu.php?page=data"><button  class="btn btn-secondary"  ><i class="bi bi-arrow-clockwise"></i></button></a>
+                    <a href="menu.php?page=data"><button  class="btn btn-secondary"  title="refresh" ><i class="bi bi-arrow-clockwise"></i></button></a>
                 </div>
                     <table class="table  table-bordered mt-3" id="myTable">
                         <thead>
