@@ -54,10 +54,7 @@ include ('../header.php');
                     <option>R3</option>
                   </select>
                 </div><br>
-              <div class="form-group">
-                  <label>TANGGAL UBAH</label>
-                  <input type="date" name="tgl_ubah" value="<?php echo $row['tgl_ubah'] ?>" class="form-control">
-                </div><br>
+            
                 <div class="form-group">
                   <label>TANGGAL MASUK</label>
                   <input type="date" name="tgl_masuk" value="<?php echo $row['tgl_masuk'] ?>" class="form-control">
@@ -77,7 +74,7 @@ include ('../header.php');
                 
                 
                 <button type="submit" class="btn btn-dark">UPDATE</button>
-                <a href="menu.php"> <button type="" class="btn btn-light">KEMBALI</button>
+                <a href="menu.php"> <button type="" class="btn btn-secondary">KEMBALI</button>
 </a>
               </form>
             </div>

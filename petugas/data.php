@@ -13,24 +13,20 @@ include('../header.php');
             </div>
             <div class="card-body">
             
-            <form action="" method="get">
-              <div class="row g-3 align-items-center">
-                   
-                    <div class="col-auto">
-                        <input type="date" class="form-control" name="dari" required>
-                        <input type="hidden" class="form-control" name="page" required value="data">
-                    </div>
-                    <div class="col-auto">
-                        -
-                    </div>
-                    <div class="col-auto">
-                        <input type="date" class="form-control" name="ke" required>
-                    </div>
-                    <div class="col-auto">
-                    <button class="btn btn-dark" type="submit" name="cari"><i class="bi bi-search"></i></button>  
-                    </div>
+            <form method="GET" action="" style="margin-left: 20px;">
+                <div class="row g-3 align-items-center">
+                  <div class="col-auto">
+                    <input type="text" class="form-control" name="kata_cari" />
+                    <input type="hidden" class="form-control" name="page" required value="data">
+                  </div>
+                  <div class="col-auto">
+                    <button type="submit" class="btn btn-dark" name="cari-data"><i class="bi bi-search"></i></button>
+                  </div>
                 </div>
-                </form>
+            </form>
+                <div style="margin-left: 95%;">
+                    <a href="menu.php?page=data"><button  class="btn btn-secondary"  ><i class="bi bi-arrow-clockwise"></i></button></a>
+                </div>
               <table class="table table-bordered mt-3" id="myTable">
                 <thead>
                   <tr>
@@ -46,28 +42,18 @@ include('../header.php');
                   </tr>
                 </thead>
                 <tbody>
-                  <?php 
-                      include('../koneksi.php');
-                      $no = 1;
-                   
-                      
-
-                        if(isset($_GET['cari']) ){
-                        
-                          $data = mysqli_query($conn, "SELECT * FROM data_barang WHERE tgl_masuk BETWEEN '".$_GET['dari']."' and '".$_GET['ke']."'");
-                      }else{
-                         
-                          $data = mysqli_query($conn, "select * from data_barang");		
-                      }
-
-
-                    
-                      $no = 1;
-                      
-                      while($d = mysqli_fetch_array($data)){
-
-                      
-                  ?>
+                <?php 
+                        include('../koneksi.php');
+                        $no = 1;
+                        $data = mysqli_query($conn, "select * from data_barang");		
+                        if(isset($_GET['kata_cari'])) {
+                            $kata_cari = $_GET['kata_cari']; 
+                            $data = mysqli_query($conn, "SELECT * FROM data_barang WHERE nama_barang like '%".$kata_cari."%'");  
+                        } else { 
+                            $query = "SELECT * FROM data_barang ORDER BY id ASC";
+                        }
+                        while ($d = mysqli_fetch_assoc($data)) {
+                 ?>
             
 
                   <tr>
@@ -80,7 +66,7 @@ include('../header.php');
                       <td><?php echo $d['tgl_masuk'] ?></td>
                       <td><?php echo $d['tgl_ubah'] ?></td>
                       <td class="text-center">
-                              <a href="menu.php?page=edit-barang&id=<?php echo $d['kode_barang'] ?>" class="btn btn-sm btn-dark"><i class="bi bi-pen"></i>EDIT</a>
+                              <a href="menu.php?page=edit-barang&id=<?php echo $d['id'] ?>" class="btn btn-sm btn-dark"><i class="bi bi-pen"></i>EDIT</a>
                            
                       </td>
                     

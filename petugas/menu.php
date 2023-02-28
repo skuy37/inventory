@@ -22,7 +22,7 @@ document.location='../index.php';
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="font-family: 'Righteous', cursive;">
   <div class="container-fluid">
-  <img src="IMG/gambar_2.png" width="80" height="80" class="d-inline-block align-top" alt="">
+  <img src="../IMG/gambar7.png" width="80" height="80" class="d-inline-block align-top" alt="">
     
   </a>
     <div class="collapse navbar-collapse" id="navbarText">

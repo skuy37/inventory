@@ -8,14 +8,24 @@
         <div class="col-md-12">
             <div class="card-header ">
              DATA PETUGAS
-            </div>
-            <form method="GET" action="">
-                <label>Kata Pencarian : </label>
-                <input type="text" name="kata_cari" />
+            </div><br>
+            <form method="GET" action="" style="margin-left: 20px;">
+            <span class="placeholder col-6"></span>
+            <span class="placeholder w-75"></span>
+            <span class="placeholder" style="width: 25%;"></span>
+            <div class="row g-3 align-items-center">
+              <div class="col-auto">
+                <input type="text" class="form-control" name="kata_cari" />
                 <input type="hidden" class="form-control" name="page" required value="data_petugas">
-                <button type="submit" name="cari-petugas">Cari</button>
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-dark" name="cari-petugas"><i class="bi bi-search"></i></button>
+              </div>
+            </div>
             </form>
-            
+            <div style="margin-left: 95%;">
+                    <a href="menu.php?page=data_petugas"><button  class="btn btn-secondary"  ><i class="bi bi-arrow-clockwise"></i></button></a>
+                </div>
               <table class="table table-bordered mt-3" id="myTable">
                     <thead>
                         <tr>
@@ -48,7 +58,7 @@
                         <td><?php echo $d['password'] ?></td>
                         <td class="text-center">
                             <a href="menu.php?page=edit-petugas&id=<?php echo $d['id'] ?>" class="btn btn-sm btn-dark"><i class="bi bi-pen"></i>EDIT</a>
-                            <a href="hapus_petugas.php?id=<?php echo $d['id'] ?>" class="btn btn-sm btn-light" data-toggle="modal" data-target="#ModalLoginForm"><i class="bi bi-eraser"></i>HAPUS</a>
+                            <a href="hapus_petugas.php?id=<?php echo $d['id'] ?>" class="btn btn-sm btn-secondary"><i class="bi bi-eraser"></i>HAPUS</a>
                      
                         </td>
                     </tr>

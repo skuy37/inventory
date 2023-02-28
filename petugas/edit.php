@@ -4,9 +4,9 @@
  
 include ('../header.php');
 
-  $kode_barang = $_GET['id'];
+  $id = $_GET['id'];
   
-  $query = "SELECT * FROM data_barang WHERE kode_barang = '$kode_barang' LIMIT 1";
+  $query = "SELECT * FROM data_barang WHERE id = '$id' LIMIT 1";
 
   $result = mysqli_query($conn, $query);
 
@@ -26,13 +26,8 @@ include ('../header.php');
             </div>
             <div class="card-body">
               <form action="./menu.php?page=update" method="POST">
-                
-              <div class="form-group">
-                  <label>TANGGAL UBAH</label>
-                  <input type="date" name="tgl_ubah" value="<?php echo $row['tgl_ubah'] ?>" class="form-control">
-                  <input type="hidden" name="kode_barang" value="<?php echo $row['kode_barang']?>"placeholder="Masukkan Nama Siswa" class="form-control">
-                </div><br>
                 <div class="form-group">
+                  <input type="hidden" name="id" value="<?php echo $row['id']?>" class="form-control">
                   <label>KONDISI</label>
                   <select name="kondisi"   class="form-control">
                   <option><?php echo $row['kondisi'] ?></option>

@@ -23,8 +23,9 @@ include('../header.php');
                     </div>
                 </div>
                 </form>
-                <div style="margin-left: 95%;">
-               <button class="btn btn-dark" onclick="printDiv('print')"><i class="bi bi-printer"></i></button>
+                <div style="margin-left: 90%;">
+                    <button class="btn btn-dark" onclick="printDiv('print')"><i class="bi bi-printer"></i></button>
+                    <a href="menu.php?page=cetak"><button  class="btn btn-secondary"  ><i class="bi bi-arrow-clockwise"></i></button></a>
                 </div>
       <div class="row mt-3">
         <div class="col-md-12">

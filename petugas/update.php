@@ -2,20 +2,19 @@
 
 
 include('../koneksi.php');
-
-$kode_barang  =$_POST['kode_barang'];
-$tgl_ubah     = $_POST['tgl_ubah'];
+$id          = $_POST['id'];
+$tgl_ubah     = date("Y-m-d H:i:s");
 $kondisi          = $_POST['kondisi'];
 
 
 
 
-$query = "UPDATE data_barang SET tgl_ubah = '$tgl_ubah', kondisi = '$kondisi' WHERE kode_barang = '$kode_barang'";
+$query = "UPDATE data_barang SET tgl_ubah = '$tgl_ubah', kondisi = '$kondisi' WHERE id = '$id'";
 
 
 if($conn->query($query)) {
     
-    header("location: menu.php");
+    header("location: menu.php?page=data");
 } else {
    
     echo "Data Gagal    Diupate!";

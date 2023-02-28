@@ -34,7 +34,7 @@ include('../header.php');
                 </div><br>
                 
                 <button type="submit" class="btn btn-dark">SIMPAN</button>
-                <button type="reset" class="btn btn-light">RESET</button>
+                <button type="reset" class="btn btn-secondary">RESET</button>
 
               </form>
             </div>

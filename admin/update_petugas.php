@@ -11,6 +11,7 @@ $username          = $_POST['username'];
 
 
 
+
 $query = "UPDATE users SET password = '$password', level = '$level', email = '$email', username = '$username' WHERE id = '$id'";
 
 

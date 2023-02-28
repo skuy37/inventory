@@ -37,7 +37,7 @@ include('../header.php');
                     <option></option>
                     <option>R1</option>
                     <option>R2</option>
-                    <option>R2</option>
+                    <option>R3</option>
                   </select>
                 </div><br>
                 <div class="form-group">
@@ -59,7 +59,7 @@ include('../header.php');
                 </div><br>
                 
                 <button type="submit" class="btn btn-dark">SIMPAN</button>
-                <button type="reset" class="btn btn-light">RESET</button>
+                <button type="reset" class="btn btn-secondary">RESET</button>
 
               </form>
             </div>

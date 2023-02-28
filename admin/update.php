@@ -4,7 +4,7 @@
 include('../koneksi.php');
 $id          = $_POST['id'];
 $kode_barang  =$_POST['kode_barang'];
-$tgl_ubah     = $_POST['tgl_ubah'];
+$tgl_ubah     = date("Y-m-d H:i:s");;
 $tgl_masuk     = $_POST['tgl_masuk'];
 $kondisi          = $_POST['kondisi'];
 $nama_barang          = $_POST['nama_barang'];
