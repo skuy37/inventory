@@ -45,10 +45,6 @@ include('../header.php');
                   <input type="date" name="tgl_masuk" placeholder="Masukkan Nama Siswa" class="form-control">
                 </div><br>
                 <div class="form-group">
-                  <label>TANGGAL UBAH</label>
-                  <input type="date" name="tgl_ubah" placeholder="Masukkan Nama Siswa" class="form-control">
-                </div><br>
-                <div class="form-group">
                   <label>KONDISI</label>
                   <select name="kondisi" id="" class="form-control">
                     <option>BAIK</option>

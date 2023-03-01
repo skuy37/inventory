@@ -20,7 +20,7 @@ document.location='../index.php';
 
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="font-family: 'Righteous', cursive;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar fixed-top" style="font-family: 'Righteous', cursive;">
   <div class="container-fluid">
   <img src="../IMG/gambar7.png" width="80" height="80" class="d-inline-block align-top" alt="">
     
@@ -52,7 +52,7 @@ document.location='../index.php';
  
 
 
-<div style="margin=left:2%">
+<div style="margin-top:150px">
     <?php 
         if(isset($_GET['page'])){
             $page = $_GET['page'];

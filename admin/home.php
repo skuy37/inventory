@@ -31,7 +31,7 @@ include '../koneksi.php';
   <div class="col-md-3"  style="margin-top: 100px;">
     <div class="card" >
       <div class="card-body" style=" background-color: #F8F9FA;">
-      <p class="card-text"><b>JUMLAH PETUGAS</b></p>
+      <p class="card-text"><b>JUMLAH PETUGAS & ADMIN</b></p>
        <?php
         include '../koneksi.php';
        
