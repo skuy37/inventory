@@ -15,19 +15,20 @@ include('../header.php');
                 
                 <div class="form-group">
                   <label>USERNAME</label>
-                  <input type="text" name="username" placeholder="Masukkan Username" class="form-control">
+                  <input type="text" name="username" placeholder="Masukkan Username" class="form-control" required>
                 </div><br>
                 <div class="form-group">
                   <label>EMAIL</label>
-                  <input type="email" name="email" placeholder="Masukkan Email" class="form-control">
+                  <input type="email" name="email" placeholder="Masukkan Email" class="form-control" required>
                 </div><br>
                 <div class="form-group">
                   <label>PASSWORD</label>
-                  <input type="text" name="password" placeholder="Masukkan Passwosrd" class="form-control">
+                  <input type="text" name="password" placeholder="Masukkan Passwosrd" class="form-control" required>
                 </div><br>
                 <div class="form-group">
                   <label>LEVEL</label>
-                  <select name="level" id="" class="form-control">
+                  <select name="level" id="" class="form-control" required>
+                  <option ></option>
                   <option >admin</option>
                   <option>petugas</option>
                  </select>

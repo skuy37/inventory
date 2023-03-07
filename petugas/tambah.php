@@ -15,16 +15,16 @@ include('../header.php');
                 
                 <div class="form-group">
                   <label>NAMA BARANG</label>
-                  <input type="text" name="nama_barang" placeholder="Masukkan Nama Barang" class="form-control">
+                  <input type="text" name="nama_barang" placeholder="Masukkan Nama Barang" class="form-control" required>
                 </div><br>
 
                 <div class="form-group">
                   <label>KODE BARANG</label>
-                  <input type="text" name="kode_barang" placeholder="Masukkan Kode Barang " class="form-control">
+                  <input type="text" name="kode_barang" placeholder="Masukkan Kode Barang " class="form-control" required>
                 </div><br>
                 <div class="form-group">
                   <label>LABORATORIUM</label>
-                  <select name="lab" id="" class="form-control">
+                  <select name="lab" id="" class="form-control" required>
                     <option></option>
                     <option>LAB 1</option>
                     <option>LAB 2</option>
@@ -33,7 +33,7 @@ include('../header.php');
                 </div><br>
                 <div class="form-group">
                   <label>RUANGAN</label>
-                  <select name="ruangan" id="" class="form-control">
+                  <select name="ruangan" id="" class="form-control" required>
                     <option></option>
                     <option>R1</option>
                     <option>R2</option>
@@ -42,7 +42,7 @@ include('../header.php');
                 </div><br>
                 <div class="form-group">
                   <label>TANGGAL MASUK</label>
-                  <input type="date" name="tgl_masuk" placeholder="Masukkan Nama Siswa" class="form-control">
+                  <input type="date" name="tgl_masuk" placeholder="Masukkan Nama Siswa" class="form-control" required>
                 </div><br>
                 <div class="form-group">
                   <label>TANGGAL UBAH</label>
@@ -50,7 +50,7 @@ include('../header.php');
                 </div><br>
                 <div class="form-group">
                   <label>KONDISI</label>
-                  <select name="kondisi" id="" class="form-control">
+                  <select name="kondisi" id="" class="form-control" required>
                     <option></option>
                     <option>BAIK</option>
                     <option>RUSAK RINGAN</option>
