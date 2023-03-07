@@ -19,14 +19,13 @@ $query = "INSERT INTO data_barang (nama_barang, kode_barang, tgl_masuk, kondisi,
 if($conn ->query($query)) {
 
    
-    header("location:  menu.php");
+    header("location: menu.php?page=tambah");
    
 
 } else {
 
     
-    echo "Data Gagal Disimpan!";
-
+    echo "gagal disimpan";
 }
 
 ?>
