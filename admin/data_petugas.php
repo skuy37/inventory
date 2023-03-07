@@ -58,7 +58,7 @@
                         <td><?php echo $d['password'] ?></td>
                         <td class="text-center">
                             <a href="menu.php?page=edit-petugas&id=<?php echo $d['id'] ?>" class="btn btn-sm btn-dark"><i class="bi bi-pen"></i>EDIT</a>
-                            <a href="hapus_petugas.php?id=<?php echo $d['id'] ?>" class="btn btn-sm btn-secondary"><i class="bi bi-eraser"></i>HAPUS</a>
+                            <a href="hapus_petugas.php?id=<?php echo $d['id'] ?>"  onclick="return confirm('Yakin Hapus?')" class="btn btn-sm btn-secondary"><i class="bi bi-eraser"></i>HAPUS</a>
                      
                         </td>
                     </tr>

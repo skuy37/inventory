@@ -1,7 +1,11 @@
 <?php
 include('../header.php');
+if(isset($_GET['nama_barang'])){
+  if($_GET['nama_barang'] == "kosong"){
+      echo "<h4 style='color:red'>Harap ketik nama pada kolom tersedia !</h4>";
+  }
+}
 ?>
-
 
     <div class="container" style="margin-top: 80px; font-family: 'Righteous', cursive;">
       <div class="row">
@@ -11,7 +15,7 @@ include('../header.php');
               TAMBAH DATA
             </div>
             <div class="card-body">
-              <form action="menu.php?page=simpan" method="POST">
+              <form action="menu.php?page=simpan" method="POST" onSubmit="validasi()">
                 
                 <div class="form-group">
                   <label>NAMA BARANG</label>
@@ -63,7 +67,18 @@ include('../header.php');
         </div>
       </div>
     </div>
-
+    <script type="text/javascript">
+            function validasi() {
+              var nama_barang = document.getElementById("nama_barang").value;
+              var kode_barang = document.getElementById("kode_barang").value;
+              var ko = document.getElementById("kode_barang").value;
+              if (nama_barang != "" && kode_barang!="") {
+                return true;
+              }else{
+                alert('Anda harus mengisi data dengan lengkap !');
+              }
+            }
+</script>
     <?php
 include('../footer.php');
 ?>
