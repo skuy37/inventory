@@ -4,7 +4,7 @@ include '../koneksi.php';
 ?>
 <div class="mt-5">
   <div style="text-align: center; font-family: 'Righteous', cursive;" class="animate__animated animate__bounce animate_slow">
-    <h1>SELAMAT DATANG</h1>
+    <?php echo "<h1>SELAMAT DATANG, " . $_SESSION['email'] ."!". "</h1>"; ?>
     <h1>DI APLIKASI INVENTORY LABORATORIUM</h1>
   </div>
 <div class="row" style="margin-left: 300px; margin-top: 50px; font-family: 'Righteous', cursive;">
