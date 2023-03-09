@@ -29,16 +29,16 @@ include ('../header.php');
               <form action="./menu.php?page=update" method="POST">
               <div class="form-group">
                   <label>NAMA BARANG</label>
-                  <input type="text" name="nama_barang" value="<?php echo $row['nama_barang'] ?>" class="form-control">
+                  <input type="text" name="nama_barang" value="<?php echo $row['nama_barang'] ?>" class="form-control"  required>
                 </div><br>
               <div class="form-group">
                   <label>KODE_BARANG</label>
-                  <input type="text" name="kode_barang" value="<?php echo $row['kode_barang'] ?>" class="form-control">
+                  <input type="text" name="kode_barang" value="<?php echo $row['kode_barang'] ?>" class="form-control"  required>
                   <input type="hidden" name="id" value="<?php echo $row['id']?>"placeholder="Masukkan Nama Siswa" class="form-control">
                 </div><br>
                 <div class="form-group">
                   <label>TANGGAL UBAH</label>
-                  <select name="lab" id="" class="form-control">
+                  <select name="lab" id="" class="form-control"  required>
                     <option><?php echo $row['lab'] ?></option>
                     <option>LAB 1</option>
                     <option>LAB 2</option>
@@ -57,7 +57,7 @@ include ('../header.php');
             
                 <div class="form-group">
                   <label>TANGGAL MASUK</label>
-                  <input type="date" name="tgl_masuk" value="<?php echo $row['tgl_masuk'] ?>" class="form-control">
+                  <input type="date" name="tgl_masuk" value="<?php echo $row['tgl_masuk'] ?>" class="form-control"  required>
                 </div><br>
                 <div class="form-group">
                   <label>KONDISI</label>

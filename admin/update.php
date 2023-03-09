@@ -18,7 +18,7 @@ $query = "UPDATE data_barang SET tgl_ubah = '$tgl_ubah', kondisi = '$kondisi', n
 
 if($conn->query($query)) {
     
-    header("location:menu.php?page=data");
+    header("location: menu.php?page=data");
 } else {
    
     echo "Data Gagal    Diupate!";

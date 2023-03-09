@@ -17,16 +17,16 @@ include ('../header.php');
               <form action="update_petugas.php" method="POST">
                   <div class="form-group">
                     <label>USERNAME</label>
-                    <input type="text" name="username" value="<?php echo $row['username'] ?>" class="form-control">
+                    <input type="text" name="username" value="<?php echo $row['username'] ?>" class="form-control" required>
                     <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
                   </div><br>
                   <div class="form-group">
                     <label>EMAIL</label>
-                    <input type="email" name="email" value="<?php echo $row['email'] ?>" class="form-control">
+                    <input type="email" name="email" value="<?php echo $row['email'] ?>" class="form-control" required>
                   </div><br>
                   <div class="form-group">
                     <label>PASSWORD</label>
-                    <input type="text" name="password" value="<?php echo $row['password'] ?>" class="form-control">
+                    <input type="text" name="password" value="<?php echo $row['password'] ?>" class="form-control" reqiured>
                  </div><br>
                  <div class="form-group">
                       <label>LEVEL</label>
@@ -37,7 +37,6 @@ include ('../header.php');
                       </select>                 
                 </div><br>
                   <button type="submit" class="btn btn-dark">UPDATE</button>
-                  <a href="menu.php"> <button type="" class="btn btn-secondary">KEMBALI</button></a>
               </form>
             </div>
           </div>
