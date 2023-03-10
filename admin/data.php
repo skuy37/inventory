@@ -41,19 +41,7 @@ include ('../header.php');
                       <tbody>
                       <?php 
                         include('../koneksi.php');
-                        $batas = 10;
-                        $halaman = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1;
-                        $halaman_awal = ($halaman>1) ? ($halaman * $batas) - $batas : 0;	
-                 
-                        $previous = $halaman - 1;
-                        $next = $halaman + 1;
-                        
                         $data = mysqli_query($conn,"select * from data_barang");
-                        $jumlah_data = mysqli_num_rows($data);
-                        $total_halaman = ceil($jumlah_data / $batas);
-                 
-                        $data = mysqli_query($conn,"select * from data_barang limit $halaman_awal, $batas");
-                        $nomor = $halaman_awal+1;
                         $no = 1;
                         if(isset($_GET['kata_cari'])) {
                             $kata_cari = $_GET['kata_cari']; 
@@ -81,23 +69,6 @@ include ('../header.php');
                               ?>
                       </tbody>
                     </table>  
-                    <nav>
-                      <ul class="pagination justify-content-center">
-                        <li class="page-item">
-                          <a class="page-link" <?php if($halaman > 1){ echo "href='menu.php?page=data&halaman=$previous'"; } ?>>Previous</a>
-                        </li>
-                        <?php 
-                        for($x=1;$x<=$total_halaman;$x++){
-                          ?> 
-                          <li class="page-item"><a class="page-link" href="menu.php?page=data&halaman=<?php echo $x ?>"><?php echo $x; ?></a></li>
-                          <?php
-                        }
-                        ?>				
-                        <li class="page-item">
-                          <a  class="page-link" <?php if($halaman < $total_halaman) { echo "href='menu.php?page=data&halaman=$next'"; } ?>>Next</a>
-                        </li>
-                      </ul>
-                    </nav>            
             </div>
           </div>
       </div>

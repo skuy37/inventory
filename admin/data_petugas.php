@@ -24,13 +24,12 @@
             </div>
             </form>
             <div style="margin-left: 95%;">
-                    <a href="menu.php?page=data_petugas"><button  class="btn btn-secondary" title="REFRESHg" ><i class="bi bi-arrow-clockwise"></i></button></a>
+                    <a href="menu.php?page=data_petugas"><button  class="btn btn-secondary" title="REFRESH" ><i class="bi bi-arrow-clockwise"></i></button></a>
                 </div>
               <table class="table table-bordered mt-3" id="myTable">
                     <thead>
                         <tr>
                             <th scope="col">NO.</th>
-                            <th scope="col">USERNAME</th>
                             <th scope="col">EMAIL</th>
                             <th scope="col">LEVEL</th>
                             <th scope="col">PASSWORD</th>
@@ -44,7 +43,7 @@
                     $data = mysqli_query($conn, "select * from users");		
                     if(isset($_GET['kata_cari'])) {
                         $kata_cari = $_GET['kata_cari']; 
-                        $data = mysqli_query($conn, "SELECT * FROM users WHERE username like '%".$kata_cari."%'");  
+                        $data = mysqli_query($conn, "SELECT * FROM users WHERE email like '%".$kata_cari."%'");  
                     } else { 
                         $query = "SELECT * FROM users ORDER BY id ASC";
                     }
@@ -52,7 +51,6 @@
                     ?>
                     <tr>
                         <td><?php echo $no++ ?></td>
-                        <td><?php echo $d['username'] ?></td>
                         <td><?php echo $d['email'] ?></td>
                         <td><?php echo $d['level'] ?></td>
                         <td><?php echo $d['password'] ?></td>

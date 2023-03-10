@@ -4,7 +4,7 @@
 include('../koneksi.php');
 
 
-$username          = $_POST['username'];
+
 $email = $_POST['email'];
 $password          = $_POST['password'];
 $level = $_POST['level'];
@@ -12,7 +12,7 @@ $level = $_POST['level'];
 
 
 
-$query = "INSERT INTO users (username, email, password, level) VALUES ('$username', '$email', '$password', '$level')";
+$query = "INSERT INTO users ( email, password, level) VALUES ('$email', '$password', '$level')";
 
 
 if($conn ->query($query)) {

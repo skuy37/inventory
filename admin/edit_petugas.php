@@ -16,13 +16,9 @@ include ('../header.php');
             <div class="card-body">
               <form action="update_petugas.php" method="POST">
                   <div class="form-group">
-                    <label>USERNAME</label>
-                    <input type="text" name="username" value="<?php echo $row['username'] ?>" class="form-control" required>
-                    <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
-                  </div><br>
-                  <div class="form-group">
                     <label>EMAIL</label>
                     <input type="email" name="email" value="<?php echo $row['email'] ?>" class="form-control" required>
+                    <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
                   </div><br>
                   <div class="form-group">
                     <label>PASSWORD</label>

@@ -26,9 +26,9 @@ include('../header.php');
                   <label>LABORATORIUM</label>
                   <select name="lab" id="" class="form-control" required>
                     <option></option>
-                    <option>LAB 1</option>
-                    <option>LAB 2</option>
-                    <option>LAB 3</option>
+                    <option>LAB1</option>
+                    <option>LAB2</option>
+                    <option>LAB3</option>
                   </select>
                 </div><br>
                 <div class="form-group">

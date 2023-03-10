@@ -37,13 +37,7 @@ include ('../header.php');
                     <option>DIPERBAIKI</option>
                   </select>
                 </div><br>
-
-                
-                
-                
                 <button type="submit" class="btn btn-dark">UPDATE</button>
-                <a href="menu.php"> <button type="" class="btn btn-light">KEMBALI</button>
-</a>
               </form>
             </div>
           </div>

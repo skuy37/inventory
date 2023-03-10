@@ -12,11 +12,6 @@ include('../header.php');
             </div>
             <div class="card-body">
               <form action="simpan_petugas.php" method="POST">
-                
-                <div class="form-group">
-                  <label>USERNAME</label>
-                  <input type="text" name="username" placeholder="Masukkan Username" class="form-control" required>
-                </div><br>
                 <div class="form-group">
                   <label>EMAIL</label>
                   <input type="email" name="email" placeholder="Masukkan Email" class="form-control" required>
